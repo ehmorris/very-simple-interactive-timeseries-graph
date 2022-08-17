@@ -122,6 +122,12 @@ const renderGraphOverlay = ({ data, elementID, yMax, fillColor }) => {
     .addEventListener("mousemove", ({ offsetX }) => {
       requestAnimationFrame(() => draw({ mouseX: offsetX }));
     });
+
+  document
+    .getElementById(elementID)
+    .addEventListener("touchmove", ({ offsetX }) => {
+      requestAnimationFrame(() => draw({ mouseX: offsetX }));
+    });
 };
 
 renderStaticGraph({
