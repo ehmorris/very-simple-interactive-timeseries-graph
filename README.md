@@ -1,2 +1,1 @@
-# very-simple-interactive-timeseries-graph
-Created with CodeSandbox
+# A very simple interactive timeseries graph
