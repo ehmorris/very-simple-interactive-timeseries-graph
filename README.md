@@ -1,8 +1,8 @@
 # A very simple interactive timeseries graph
 
-![](https://raw.githubusercontent.com/ehmorris/very-simple-interactive-timeseries-graph/readme/demo1.gif)
+![](https://raw.githubusercontent.com/ehmorris/very-simple-interactive-timeseries-graph/main/demo1.gif)
 
-![](https://raw.githubusercontent.com/ehmorris/very-simple-interactive-timeseries-graph/readme/demo2.gif)
+![](https://raw.githubusercontent.com/ehmorris/very-simple-interactive-timeseries-graph/main/demo2.gif)
 
 HTML Should look like this:
 
