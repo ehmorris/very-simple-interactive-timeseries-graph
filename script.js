@@ -26,7 +26,7 @@ const renderStaticGraph = ({
   bottomLeftLabel,
   bottomRightLabel,
   backgroundColor,
-  fillColor
+  fillColor,
 }) => {
   const { ctx, width, height } = attachToCanvasElement(elementID);
 
@@ -89,10 +89,12 @@ const renderGraphOverlay = ({ data, elementID, yMax, fillColor }) => {
     ctx.font = "10px sans-serif";
     const labelXAxis = `${dataPointStart.x}-${dataPointEnd.x}`;
     const labelYAxis = `${dataPointStart.y}-${dataPointEnd.y}`;
-    const labelYAxisYPos =
+    const labelYAxisYPos = Math.max(
       height -
-      height *
-        ((dataPointStart.y - (dataPointStart.y - dataPointEnd.y) / 2) / yMax);
+        height *
+          ((dataPointStart.y - (dataPointStart.y - dataPointEnd.y) / 2) / yMax),
+      12
+    );
     const widestLabel = Math.max(
       ctx.measureText(labelXAxis).width,
       ctx.measureText(labelYAxis).width
@@ -130,14 +132,14 @@ renderStaticGraph({
   bottomLeftLabel: sampleData[0].x,
   bottomRightLabel: sampleData[sampleData.length - 1].x,
   backgroundColor: "#a37d00",
-  fillColor: "#fcc203"
+  fillColor: "#fcc203",
 });
 
 renderGraphOverlay({
   data: sampleData,
   elementID: "graphOverlayElement",
   yMax: Math.max(...sampleData.map(({ x, y }) => y)),
-  fillColor: "black"
+  fillColor: "black",
 });
 
 renderStaticGraph({
@@ -148,12 +150,12 @@ renderStaticGraph({
   bottomLeftLabel: debugData[0].x,
   bottomRightLabel: debugData[debugData.length - 1].x,
   backgroundColor: "#a37d00",
-  fillColor: "#fcc203"
+  fillColor: "#fcc203",
 });
 
 renderGraphOverlay({
   data: debugData,
   elementID: "debugGraphOverlayElement",
   yMax: Math.max(...debugData.map(({ x, y }) => y)),
-  fillColor: "black"
+  fillColor: "black",
 });
