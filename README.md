@@ -24,7 +24,7 @@ JS Should look like this:
 renderStaticGraph({
   data: sampleData,
   elementID: "graphCanvasElement",
-  yMax: 999),
+  yMax: 999,
   topLabel: "Some Label",
   bottomLeftLabel: "Some Label",
   bottomRightLabel: "Some Label",
@@ -35,7 +35,7 @@ renderStaticGraph({
 renderGraphOverlay({
   data: sampleData,
   elementID: "graphOverlayElement",
-  yMax: 999),
+  yMax: 999,
   fillColor: "red"
 });
 ```
