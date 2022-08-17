@@ -6,7 +6,7 @@
 
 HTML Should look like this:
 
-```
+``` HTML
 <div style="position: relative;">
   <canvas id="graphCanvasElement" width="600px" height="200px"></canvas>
   <canvas
@@ -20,7 +20,7 @@ HTML Should look like this:
 
 JS Should look like this:
 
-```
+``` JS
 renderStaticGraph({
   data: sampleData,
   elementID: "graphCanvasElement",
@@ -42,7 +42,7 @@ renderGraphOverlay({
 
 Data should look like this:
 
-```
+``` JS
 const sampleData = [ { x:STRING, y:FLOAT } ];
 ```
 
